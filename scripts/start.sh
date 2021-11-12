@@ -20,8 +20,8 @@ cat > /opt/report/__init__.py <<EOF
 import os
 
 #CONFIG
-environment = ${ENVIRONMENT}
-app_name =  ${APP_NAME}
+environment = '${ENVIRONMENT}'
+app_name =  '${APP_NAME}'
 EOF
 
 

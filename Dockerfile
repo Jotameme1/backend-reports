@@ -24,6 +24,6 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN chmod 755 /start.sh
 
-EXPOSE 8080 2222
+EXPOSE 8080
 
 CMD ["/start.sh"]
