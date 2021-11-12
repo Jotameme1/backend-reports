@@ -2,7 +2,7 @@ from typing import Optional
 import uvicorn
 from fastapi import FastAPI
 from __init__ import environment
-from endpoint_function import ping,post_progress_user
+from endpoint_function import ping,post_progress_user,ip_salida_
 
 if (environment == 'production'):
     app = FastAPI()
@@ -17,6 +17,10 @@ def status():
 @app.get("/ping_nombre/{name}",status_code=200)
 def ping_nombre(name:str):#def read_item(item_id: int, q: Optional[str] = None):#@app.get("/items/{item_id}")#http://localhost:8080/items/1?q=ola
     return ping(name)
+
+@app.get("/ip_salida",status_code=200)
+def ip_salida():#def read_item(item_id: int, q: Optional[str] = None):#@app.get("/items/{item_id}")#http://localhost:8080/items/1?q=ola
+    return ip_salida_()
 
 @app.post("/ping_nombre_post/", status_code = 201)
 def progreso_usuario(json_value):
