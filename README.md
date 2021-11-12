@@ -16,3 +16,10 @@ EOF
 `docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' backend-report`
 
 `docker exec -ti backend-disk-balancer bash`
+
+
+cat >> env.txt <<EOF
+ENVIRONMENT=production
+APP_NAME=backend-reports
+PRIVATE=$(hostname -I | awk '{print $1}')
+EOF
