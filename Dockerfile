@@ -19,11 +19,6 @@ COPY conf/supervisord.conf /etc/supervisord.conf
 COPY conf/cron /var/spool/cron/crontabs/root
 COPY scripts/start.sh /start.sh
 
-#SSH
-RUN echo "root:Docker!" | chpasswd
-RUN mkdir -p /var/run/sshd
-COPY conf/sshd_config /etc/ssh
-
 ENV TZ=America/Santiago
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
