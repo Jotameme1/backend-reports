@@ -1,0 +1,11 @@
+fastapi[all]
+mysql-connector-python
+matplotlib
+netaddr
+requests
+uvicorn[standard]
+mysqlclient
+pandas
+pycurl
+newrelic
+tabulate
