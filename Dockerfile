@@ -5,7 +5,7 @@ RUN apt-get update && \
     apt-get install python3-mysqldb -y && \
     pip install --upgrade pip && \
     apt-get install cron -y && \
-    apt-get install supervisor 
+    apt-get install supervisor -y
 
 RUN mkdir -p /opt/report
 RUN mkdir -p /opt/flags
